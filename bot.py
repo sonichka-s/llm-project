@@ -1,4 +1,5 @@
 import logging
+
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -122,14 +123,18 @@ async def run_analysis(update: Update, feature: int):
 
 
 def main():
-    application = ApplicationBuilder().token(BOT_TOKEN).build()
+    # print(analyze_agent_performance())
+    # analyze_emotional_dynamics()
+    # analyze_sales_phrases()
+    
+    # application = ApplicationBuilder().token(BOT_TOKEN).build()
 
-    application.add_handler(CommandHandler("start", start))
-    application.add_handler(CommandHandler("help", help_command))
-    application.add_handler(CallbackQueryHandler(handle_menu))
+    # application.add_handler(CommandHandler("start", start))
+    # application.add_handler(CommandHandler("help", help_command))
+    # application.add_handler(CallbackQueryHandler(handle_menu))
 
-    logging.info("🤖 Бот запущен...")
-    application.run_polling()
+    # logging.info("🤖 Бот запущен...")
+    # application.run_polling()
 
 
 if __name__ == "__main__":
